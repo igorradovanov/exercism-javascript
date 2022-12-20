@@ -20,13 +20,19 @@
 // Get those rates calculated!
 
 /**
+ * The number of working hours in one day
+ */
+
+const WORKING_HOURS_PER_DAY = 8;
+
+/**
  * The day rate, given a rate per hour
  *
  * @param {number} ratePerHour
  * @returns {number} the rate per day
  */
 export function dayRate(ratePerHour) {
-  return 8 * ratePerHour;
+  return WORKING_HOURS_PER_DAY * ratePerHour;
 }
 
 /**
@@ -37,7 +43,7 @@ export function dayRate(ratePerHour) {
  * @returns {number} the number of days
  */
 export function daysInBudget(budget, ratePerHour) {
-  return Math.floor((budget / ratePerHour) / 8);
+  return Math.floor((budget / ratePerHour) / WORKING_HOURS_PER_DAY);
 }
 
 /**

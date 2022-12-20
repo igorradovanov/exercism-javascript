@@ -26,7 +26,7 @@
  * @returns {number} the rate per day
  */
 export function dayRate(ratePerHour) {
-  throw new Error('Remove this line and implement the function');
+  return 8 * ratePerHour;
 }
 
 /**

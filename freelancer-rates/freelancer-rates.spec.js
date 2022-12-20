@@ -73,7 +73,6 @@ describe('cost with monthly discount', () => {
     test('for 130 days with 15% discount', () => {
       const actual = priceWithMonthlyDiscount(16, 130, 0.15);
       const expected = 14528;
-      16640
       expect(actual).toBeCloseTo(expected, DIFFERENCE_PRECISION_IN_DIGITS);
     });
   });

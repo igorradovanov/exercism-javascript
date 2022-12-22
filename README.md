@@ -24,7 +24,7 @@ List of projects:
  - [ ] nullability  
  - [ ] ozans-playlist
  - [ ] pizza-order 
- - [ ] poetry-club-door-policy 
+ - [x] poetry-club-door-policy 
  - [ ] regular-chatbot
  - [ ] translation-service  
  - [ ] vehicle-purchase  

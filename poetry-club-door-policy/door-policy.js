@@ -51,7 +51,10 @@ export function frontDoorPassword(word) {
  * @returns {string}
  */
 export function backDoorResponse(line) {
-  throw new Error('Remove this line and implement the function');
+  let trimmedLine = line.trim(); 
+  let lastChar = trimmedLine[trimmedLine.length - 1];
+
+  return lastChar;
 }
 
 /**

@@ -22,7 +22,8 @@ export function getItem(cards, position) {
  * @returns {number[]} the cards with the change applied
  */
 export function setItem(cards, position, replacementCard) {
-  
+  cards[position] = replacementCard;
+  return cards;
 }
 
 /**

@@ -11,7 +11,11 @@
  * @returns {boolean} whether a license is required
  */
 export function needsLicense(kind) {
-  throw new Error('Please implement the needsLicense function');
+  if (kind === 'car' || kind === 'truck') {
+    return true;
+  }else{
+    return false;
+  }
 }
 
 /**

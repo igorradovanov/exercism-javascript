@@ -13,7 +13,7 @@
 export function needsLicense(kind) {
   if (kind === 'car' || kind === 'truck') {
     return true;
-  }else{
+  } else {
     return false;
   }
 }
@@ -28,9 +28,9 @@ export function needsLicense(kind) {
  */
 export function chooseVehicle(option1, option2) {
   let rest = ' is clearly the better choice.';
-  if(option1 < option2){
+  if (option1 < option2) {
     return option1 + rest;
-  }else{
+  } else {
     return option2 + rest;
   }
 }
@@ -44,5 +44,11 @@ export function chooseVehicle(option1, option2) {
  * @returns {number} expected resell price in the dealership
  */
 export function calculateResellPrice(originalPrice, age) {
-  throw new Error('Please implement the calculateResellPrice function');
+  if (age < 3) {
+    return (80 / 100) * originalPrice;
+  } else if (age > 10) {
+    return (50 / 100) * originalPrice;
+  } else {
+    return (70 / 100) * originalPrice;
+  }
 }

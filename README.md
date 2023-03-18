@@ -27,6 +27,6 @@ List of projects:
  - [x] poetry-club-door-policy 
  - [ ] regular-chatbot
  - [ ] translation-service  
- - [ ] vehicle-purchase  
+ - [x] vehicle-purchase  
  - [ ] windowing-system
 

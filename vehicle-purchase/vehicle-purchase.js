@@ -27,7 +27,12 @@ export function needsLicense(kind) {
  * @returns {string} a sentence of advice which option to choose
  */
 export function chooseVehicle(option1, option2) {
-  throw new Error('Please implement the chooseVehicle function');
+  let rest = ' is clearly the better choice.';
+  if(option1 < option2){
+    return option1 + rest;
+  }else{
+    return option2 + rest;
+  }
 }
 
 /**

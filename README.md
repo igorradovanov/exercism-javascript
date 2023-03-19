@@ -6,7 +6,7 @@ List of projects:
 
  - [ ] amusement-park 
  - [x] annalyns-infiltration 
- - [ ] bird-watcher
+ - [x] bird-watcher
  - [ ] coordinate-transformation 
  - [ ] custom-signs
  - [ ] elyses-analytic-enchantments  

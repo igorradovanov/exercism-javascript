@@ -9,6 +9,7 @@ describe('timeToMixJuice', () => {
     expect(timeToMixJuice('Energizer')).toBe(1.5);
     expect(timeToMixJuice('Green Garden')).toBe(1.5);
     expect(timeToMixJuice('Tropical Island')).toBe(3);
+    expect(timeToMixJuice('Tropical Island')).toBeGreaterThan(0);
     expect(timeToMixJuice('All or Nothing')).toBe(5);
   });
 

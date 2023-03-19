@@ -30,10 +30,10 @@ export function birdsInWeek(birdsPerDay, week) {
   let total = 0;
   const daysPerWeek = 7;
   const startIndex = (week - 1) * 7; //arr starts from 0, we need -1 here
-  const endIndex =   startIndex + daysPerWeek;
+  const endIndex = startIndex + daysPerWeek;
   const birdsInSelectedWeek = birdsPerDay.slice(startIndex, endIndex);
 
-  for(let i = 0; i < birdsInSelectedWeek.length; i++){
+  for (let i = 0; i < birdsInSelectedWeek.length; i++) {
     total = total + birdsInSelectedWeek[i];
   }
 

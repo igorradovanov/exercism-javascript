@@ -20,7 +20,7 @@ List of projects:
  - [ ] high-score-board 
  - [ ] lasagna
  - [ ] lucky-numbers
- - [ ] mixed-juices  
+ - [x] mixed-juices  
  - [ ] nullability  
  - [ ] ozans-playlist
  - [ ] pizza-order 

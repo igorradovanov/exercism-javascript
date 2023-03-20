@@ -39,9 +39,9 @@ export function limesToCut(wedgesNeeded, limes) {
   let wedgesHave = 0;
   let cutLimes = 0;
 
-  for(let i = 0; i < limes.length; i++){
-    if(wedgesHave <= wedgesNeeded && wedgesNeeded > 0){
-      switch (limes[i]){
+  for (let i = 0; i < limes.length; i++) {
+    if (wedgesHave <= wedgesNeeded && wedgesNeeded > 0) {
+      switch (limes[i]) {
         case 'small':
           wedgesHave += 6;
           break;
@@ -68,5 +68,14 @@ export function limesToCut(wedgesNeeded, limes) {
  * @returns {string[]} remaining orders after the time is up
  */
 export function remainingOrders(timeLeft, orders) {
-  throw new Error('Please implement the remainingOrders function');
+  let timeSpent = 0;
+
+  for (let i = 0; i < orders.length; i++) {
+    while (timeSpent < timeLeft) {
+      timeSpent += timeToMixJuice(orders[i]);
+      orders.shift();
+    }
+  }
+
+  return orders;
 }

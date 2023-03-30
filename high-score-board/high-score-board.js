@@ -59,7 +59,7 @@ export function updateScore(scoreBoard, player, points) {
  */
 export function applyMondayBonus(scoreBoard) {
   const MONDAY_BONUS_POINTS = 100;
-  for(let player in scoreBoard){
+  for (let player in scoreBoard) {
     scoreBoard[player] += MONDAY_BONUS_POINTS;
   }
   return scoreBoard;
@@ -72,5 +72,5 @@ export function applyMondayBonus(scoreBoard) {
  * @returns {number} normalized score
  */
 export function normalizeScore(params) {
-  throw new Error('Please implement the normalizeScore function');
+  return params.normalizeFunction(params.score);
 }

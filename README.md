@@ -17,7 +17,7 @@ List of projects:
  - [ ] factory-sensors
  - [x] freelancer-rates  
  - [ ] fruit-picker 
- - [ ] high-score-board 
+ - [x] high-score-board 
  - [ ] lasagna
  - [ ] lucky-numbers
  - [x] mixed-juices  

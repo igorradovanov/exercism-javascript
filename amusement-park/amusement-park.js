@@ -69,5 +69,7 @@ export function simpleTicketStatus(tickets, ticketId) {
  * @returns {string | undefined} version
  */
 export function gtcVersion(visitor) {
-  throw new Error('Please implement the gtcVersion function.');
+  if(visitor.gtc?.version !== undefined){
+    return visitor.gtc.version;
+  }
 }

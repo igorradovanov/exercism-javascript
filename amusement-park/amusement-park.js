@@ -53,7 +53,13 @@ export function ticketStatus(tickets, ticketId) {
  * @returns {string} ticket status
  */
 export function simpleTicketStatus(tickets, ticketId) {
-  throw new Error('Please implement the simpleTicketStatus function.');
+  let status = '';
+  if (tickets[ticketId] === undefined || tickets[ticketId] === null) {
+    status = 'invalid ticket !!!';
+  } else {
+    status = tickets[ticketId];
+  }
+  return status;
 }
 
 /**

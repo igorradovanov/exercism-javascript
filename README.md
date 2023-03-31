@@ -4,7 +4,7 @@
 
 List of projects:
 
- - [ ] amusement-park 
+ - [x] amusement-park 
  - [x] annalyns-infiltration 
  - [x] bird-watcher
  - [ ] coordinate-transformation 
@@ -18,7 +18,7 @@ List of projects:
  - [x] freelancer-rates  
  - [ ] fruit-picker 
  - [x] high-score-board 
- - [ ] lasagna
+ - [x] lasagna
  - [ ] lucky-numbers
  - [x] mixed-juices  
  - [ ] nullability  

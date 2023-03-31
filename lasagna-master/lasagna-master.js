@@ -69,8 +69,25 @@ export function quantities(layers) {
  * @param {array} friendsList 
  * @param {array} myList 
  */
-export function addSecretIngredient(friendsList, myList){
+export function addSecretIngredient(friendsList, myList) {
     const FRIENDS_LIST_LENGTH = friendsList.length;
     const SECRET_INGREDIENT = friendsList[FRIENDS_LIST_LENGTH - 1];
     myList.push(SECRET_INGREDIENT);
+}
+
+/**
+ * Scale the recipe ingredients based on the portion size
+ * 
+ * @param {object} recipe 
+ * @param {number} portions 
+ * @returns {object} scalled recipe
+ */
+export function scaleRecipe(recipe, portions) {
+    const DEFAULT_PORTIONS = 2;
+    const scale_recipe = {...recipe};
+
+    for(let ingredient in scale_recipe){
+        scale_recipe[ingredient] = (scale_recipe[ingredient]/DEFAULT_PORTIONS) * portions;
+    }
+    return scale_recipe;
 }

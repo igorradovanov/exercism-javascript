@@ -13,7 +13,6 @@
 
 
 export function cookingStatus(time) {
-
     if (time == 0) {
         return 'Lasagna is done.';
     } else if (time > 0) {
@@ -21,6 +20,8 @@ export function cookingStatus(time) {
     } else if (time === undefined) {
         return 'You forgot to set the timer.'
     }
+}
 
-
+export function preparationTime(layers, time=2){
+    return layers.length * time;
 }

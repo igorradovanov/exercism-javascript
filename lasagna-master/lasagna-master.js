@@ -62,3 +62,15 @@ export function quantities(layers) {
 
     return { noodles: noodles_total, sauce: sauce_total };
 }
+
+/**
+ * Adds the secret ingredient from the friends list
+ * 
+ * @param {array} friendsList 
+ * @param {array} myList 
+ */
+export function addSecretIngredient(friendsList, myList){
+    const FRIENDS_LIST_LENGTH = friendsList.length;
+    const SECRET_INGREDIENT = friendsList[FRIENDS_LIST_LENGTH - 1];
+    myList.push(SECRET_INGREDIENT);
+}

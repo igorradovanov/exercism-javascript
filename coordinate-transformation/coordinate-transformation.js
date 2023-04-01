@@ -36,7 +36,14 @@ export function translate2d(dx, dy) {
  *  scaled coordinate pair in the form [x, y]
  */
 export function scale2d(sx, sy) {
-  throw new Error('Implement the scale2d function');
+  let sxr = 0;
+  let syr = 0;
+  function translator(x1, y1) {
+    sxr = sx * x1;
+    syr = sy * y1;
+    return [sxr, syr];
+  }
+  return translator;
 }
 
 /**

@@ -38,12 +38,12 @@ export function translate2d(dx, dy) {
 export function scale2d(sx, sy) {
   let sxr = 0;
   let syr = 0;
-  function translator(x1, y1) {
+  function scaler(x1, y1) {
     sxr = sx * x1;
     syr = sy * y1;
     return [sxr, syr];
   }
-  return translator;
+  return scaler;
 }
 
 /**
@@ -57,7 +57,9 @@ export function scale2d(sx, sy) {
  *  transformed coordinate pair in the form [x, y]
  */
 export function composeTransform(f, g) {
-  throw new Error('Implement the composeTransform function');
+  return function (x, y) {
+    return g(...f(x, y));
+  }
 }
 
 /**

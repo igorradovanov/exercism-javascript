@@ -19,8 +19,8 @@ export function twoSum(array1, array2) {
  */
 export function luckyNumber(value) {
   let original = String(value);
-  let reversedArray = original.split("").reverse();
-  let originalReversed = reversedArray.join("");
+  let reversedArray = original.split('').reverse();
+  let originalReversed = reversedArray.join('');
   return original === originalReversed;
 }
 
@@ -32,5 +32,11 @@ export function luckyNumber(value) {
  * @returns {string} error message
  */
 export function errorMessage(input) {
-  throw new Error('Implement the errorMessage function');
+  if (!Boolean(input)) {
+    return 'Required field';
+  } else if (isNaN(Number(input)) || Number(input) == 0) {
+    return 'Must be a number besides 0';
+  } else {
+    return '';
+  }
 }

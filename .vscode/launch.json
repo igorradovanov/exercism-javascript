@@ -8,11 +8,10 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "runtimeExecutable": "node",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/coordinate-transformation/coordinate-transformation.spec.js"
+            "program": "${workspaceFolder}/lucky-numbers/lucky-numbers.spec.js"
         }
     ]
 }

@@ -16,7 +16,7 @@ List of projects:
  - [ ] elyses-transformative-enchantments  
  - [ ] factory-sensors
  - [x] freelancer-rates  
- - [ ] fruit-picker 
+ - [x] fruit-picker 
  - [x] high-score-board 
  - [x] lasagna
  - [ ] lucky-numbers

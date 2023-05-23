@@ -26,7 +26,7 @@ export function buildSign(occasion, name) {
  */
 
 export function buildBirthdaySign(age) {
-  return `Happy Birthday! What a ${age >= 50 ? "mature" : "young"} fellow you are.`
+  return `Happy Birthday! What a ${age >= 50 ? "mature" : "young"} fellow you are.`;
 }
 
 /**
@@ -39,7 +39,8 @@ export function buildBirthdaySign(age) {
  */
 
 export function graduationFor(name, year) {
-  throw new Error('Implement the graduationForm function');
+  return `Congratulations ${name}!
+Class of ${year}`;
 }
 
 /**

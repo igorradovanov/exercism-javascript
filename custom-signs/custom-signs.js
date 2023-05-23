@@ -54,5 +54,11 @@ Class of ${year}`;
  */
 
 export function costOf(sign, currency) {
-  throw new Error('Implement the costOf function');
+  const BASE_PRICE = 20.00;
+  const LETTER_COST = 2.00;
+  const numOfCharacters = sign.length;
+  const grandTotal = BASE_PRICE + (LETTER_COST * numOfCharacters);
+
+  return `Your sign costs ${grandTotal.toPrecision(4)} ${currency}.`;
+
 }

@@ -8,7 +8,7 @@ List of projects:
  - [x] annalyns-infiltration 
  - [x] bird-watcher
  - [ ] coordinate-transformation 
- - [ ] custom-signs
+ - [x] custom-signs
  - [ ] elyses-analytic-enchantments  
  - [ ] elyses-destructured-enchantments
  - [ ] elyses-enchantments 

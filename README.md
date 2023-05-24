@@ -10,7 +10,7 @@ List of projects:
  - [ ] coordinate-transformation 
  - [x] custom-signs
  - [ ] elyses-analytic-enchantments  
- - [ ] elyses-destructured-enchantments
+ - [x] elyses-destructured-enchantments
  - [ ] elyses-enchantments 
  - [ ] elyses-looping-enchantments 
  - [ ] elyses-transformative-enchantments  

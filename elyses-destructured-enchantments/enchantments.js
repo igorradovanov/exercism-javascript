@@ -10,6 +10,7 @@
  */
 export function getFirstCard(deck) {
   const [first, ...rest] = deck;
+  
   return first;
 }
 
@@ -22,6 +23,7 @@ export function getFirstCard(deck) {
  */
 export function getSecondCard(deck) {
   const [first, second, ...rest] = deck;
+
   return second;
 }
 
@@ -49,6 +51,7 @@ export function swapTopTwoCards(deck) {
  */
 export function discardTopCard(deck) {
   const [first, ...rest] = deck;
+
   return [first, [...rest]];
 }
 
@@ -64,5 +67,7 @@ const FACE_CARDS = ['jack', 'queen', 'king'];
  * third, and fourth cards are the face cards
  */
 export function insertFaceCards(deck) {
-  throw new Error('Implement the insertFaceCards function');
+  const [first, ...rest] = deck;
+
+  return [first, ...FACE_CARDS, ...rest];
 }

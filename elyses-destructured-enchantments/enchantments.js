@@ -33,7 +33,10 @@ export function getSecondCard(deck) {
  * @returns {Card[]} new deck with reordered cards
  */
 export function swapTopTwoCards(deck) {
-  throw new Error('Implement the swapTopTwoCards function');
+  const [first, second, ...rest] = deck;
+  const swappedDeck = [second, first, ...rest];
+
+  return swappedDeck;
 }
 
 /**

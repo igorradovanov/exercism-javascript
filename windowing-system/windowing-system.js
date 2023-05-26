@@ -94,3 +94,15 @@ export class ProgramWindow {
         }
     }
 }
+
+/**
+ * 
+ * @param {ProgramWindow} ProgramWindow 
+ */
+export function changeWindow(ProgramWindow){
+    const newWindowSize = new Size(400, 300);
+    const newWindowPosition = new Position(100, 150);
+    ProgramWindow.resize(newWindowSize);
+    ProgramWindow.move(newWindowPosition);
+    return ProgramWindow;
+}

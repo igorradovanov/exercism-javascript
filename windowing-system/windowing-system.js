@@ -18,7 +18,7 @@ export function Size(width = 80, height = 60) {
     this.height = height;
 }
 
-Size.prototype.resize = function (newWidth, newHeight) {
+Size.prototype.resize = function (/** @type {number} */ newWidth, /** @type {number} */ newHeight) {
     this.width = newWidth;
     this.height = newHeight;
 }
@@ -35,7 +35,7 @@ export function Position(x = 0, y = 0) {
     this.y = y;
 }
 
-Position.prototype.move = function (newX, newY) {
+Position.prototype.move = function (/** @type {number} */ newX, /** @type {number} */ newY) {
     this.x = newX;
     this.y = newY;
 }
@@ -50,5 +50,47 @@ export class ProgramWindow {
         this.screenSize = new Size(800, 600);
         this.size = new Size();
         this.position = new Position();
+    }
+
+    /**
+     * @param {Size} Size
+     */
+    resize(Size) {
+
+        if (Size.width < 1 && Size.height < 1) {
+            this.size.resize(1, 1);
+            return;
+        }
+
+        if (this.position.x + Size.width < this.screenSize.width && this.position.y + Size.height < this.screenSize.height) {
+            this.size.resize(Size.width, Size.height);
+        } else {
+            const maxWidth = this.screenSize.width - this.position.x;
+            const maxHeight = this.screenSize.height - this.position.y;
+            const newWidth = Math.min(maxWidth, Size.width);
+            const newHeight = Math.min(maxHeight, Size.height);
+            this.size.resize(newWidth, newHeight);
+        }
+    }
+
+    /**
+     * @param {Position} Position
+     */
+    move(Position) {
+
+        if (Position.x < 0 && Position.y < 0) {
+            this.position.move(0, 0);
+            return;
+        }
+
+        if (this.size.width + Position.x < this.screenSize.width && this.size.height + Position.y < this.screenSize.height) {
+            this.position.move(Position.x, Position.y)
+        } else {
+            const maxWidth = this.screenSize.width - this.size.width;
+            const maxHeight = this.screenSize.height - this.size.height;
+            const newWidth = Math.min(maxWidth, Position.x);
+            const newHeight = Math.min(maxHeight, Position.y);
+            this.position.move(newWidth, newHeight);
+        }
     }
 }

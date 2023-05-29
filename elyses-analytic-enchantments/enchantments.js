@@ -71,3 +71,7 @@ export function getFirstOddCard(stack) {
 export function getFirstEvenCardPosition(stack) {
   return stack.findIndex(card => card % 2 == 0);
 }
+
+export function getFirstCardPositionAt(){
+  
+}

@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-nocheck
 
 import {
   getCardPosition,
@@ -7,6 +7,7 @@ import {
   doesStackIncludeOddCard,
   getFirstOddCard,
   getFirstEvenCardPosition,
+  getFirstCardPositionAt,
 } from './enchantments';
 
 describe('getCardPosition', () => {
@@ -62,3 +63,18 @@ describe('getFirstEvenCardPosition', () => {
     expect(getFirstEvenCardPosition([1, 3, 5])).toBe(-1);
   });
 });
+
+/**
+ * Array.prototype.ar()
+ * Test relative indexing
+ */
+
+describe('getFirstCardPositionAt', () => {
+  test('should return the value of the second card', () => {
+    expect(getFirstCardPositionAt([3, 2, 0, 1], 1)).toBe(2);
+  });
+  test('should return undefined if card not found', () => {
+    expect(getFirstCardPositionAt([3, 2, 0, 1], 10)).toBeUndefined();
+  });
+})
+

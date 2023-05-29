@@ -79,7 +79,7 @@ export function getFirstEvenCardPosition(stack) {
  * @returns 
  */
 
-export function getFirstCardPositionAt(stack, position) {
+export function getCardPositionRelative(stack, position) {
 
   if(position === undefined){
     return undefined;

@@ -73,6 +73,12 @@ describe('getCardPositionRelative', () => {
   test('should return the value of the second card', () => {
     expect(getCardPositionRelative([3, 2, 0, 1], 1)).toBe(2);
   });
+  test('should return value of the last card', () => {
+    expect(getCardPositionRelative([3, 2, 0, 1], -1)).toBe(1);
+  })
+  test('should return value of the second card from the right to left', () => {
+    expect(getCardPositionRelative([3, 2, 0, 1], -3)).toBe(2);
+  })
   test('should return undefined if card not found', () => {
     expect(getCardPositionRelative([3, 2, 0, 1], 10)).toBeUndefined();
   });

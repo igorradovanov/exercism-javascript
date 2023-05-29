@@ -72,6 +72,18 @@ export function getFirstEvenCardPosition(stack) {
   return stack.findIndex(card => card % 2 == 0);
 }
 
-export function getFirstCardPositionAt(){
-  
+/**
+ * 
+ * @param {number[]} stack 
+ * @param {number | undefined} position 
+ * @returns 
+ */
+
+export function getFirstCardPositionAt(stack, position) {
+
+  if(position === undefined){
+    return undefined;
+  }
+
+  return stack.at(position);
 }

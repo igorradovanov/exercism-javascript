@@ -28,5 +28,5 @@ List of projects:
  - [ ] regular-chatbot
  - [ ] translation-service  
  - [x] vehicle-purchase  
- - [ ] windowing-system
+ - [x] windowing-system
 
